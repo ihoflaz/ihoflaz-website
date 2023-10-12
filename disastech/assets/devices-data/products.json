@@ -1,0 +1,34 @@
+{
+  "products": [
+    {
+      "title": "Ürün 1 Başlığı",
+      "features": [
+        "Özellik 1",
+        "Özellik 2",
+        "Özellik 3",
+        "Diğer özellikler..."
+      ],
+      "image": "assets/img/devices/cihaz1.jpg"
+    },
+    {
+      "title": "Ürün 2 Başlığı",
+      "features": [
+        "Özellik 1",
+        "Özellik 2",
+        "Özellik 3",
+        "Diğer özellikler..."
+      ],
+      "image": "assets/img/devices/cihaz2.jpg"
+    },
+    {
+      "title": "Ürün 3 Başlığı",
+      "features": [
+        "Özellik 1",
+        "Özellik 2",
+        "Özellik 3",
+        "Diğer özellikler..."
+      ],
+      "image": "assets/img/devices/cihaz3.jpg"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "deviceName": "Cihaz v1",
+    "description": "Cihaz v1 için temel açıklama.",
+    "client": "Müşteri 1",
+    "category": "Kategori 1",
+    "imageUrl": "assets/img/devices/cihaz1.jpg"
+  },
+  {
+    "id": "2",
+    "deviceName": "Cihaz v2",
+    "description": "Cihaz v2 için temel açıklama.",
+    "client": "Müşteri 2",
+    "category": "Kategori 2",
+    "imageUrl": "assets/img/devices/cihaz2.jpg"
+  },
+  {
+    "id": "3",
+    "deviceName": "Cihaz v3",
+    "description": "Cihaz v3 için temel açıklama.",
+    "client": "Müşteri 3",
+    "category": "Kategori 3",
+    "imageUrl": "assets/img/devices/cihaz3.jpg"
+  }
+]
