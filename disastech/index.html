@@ -7,7 +7,7 @@
   <meta name="author" content=""/>
   <title>Diastech</title>
   <!-- AOS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css"/>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
   <!-- Favicon-->
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico"/>
@@ -19,13 +19,10 @@
   <!-- Core theme CSS (includes Bootstrap)-->
   <link href="css/styles.css" rel="stylesheet"/>
   <style>
-    .custom-btn {
-      text-decoration: none;
-      font-weight: 300;
-    }
     .rotate {
       transform: rotate(180deg);
     }
+
     #extraInfo ul {
       padding-left: 0;
     }
@@ -47,14 +44,66 @@
       border-radius: 50%;
       transform: translateY(-50%);
     }
-    /* Full Width Section */
-    .full-width-section {
-      padding: 0;
+
+    .circle-icon img {
+      border-radius: 20%;
+      width: 120px;
+      height: 120px;
     }
 
-    .full-width-section img {width: 100%;
-      height: auto;
-      display: block;
+    .card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .card:hover::before {
+      opacity: 1;
+    }
+
+    .banner {
+      background-image: url("assets/img/product.png");
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      padding: 200px 0;
+      text-align: left;
+    }
+
+    .banner h1 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .banner p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .banner a.btn {
+      font-size: 18px;
+      padding: 10px 20px;
+      background-color: #007BFF;
+      border: none;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .banner a.btn:hover {
+      background-color: #0056b3;
     }
   </style>
 </head>
@@ -63,7 +112,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
   <div class="container">
     <a class="navbar-brand" href="#page-top">
-      <img src="assets/img/navbar-logo.svg" alt="..." style="width:200px; height:auto;"/>
+      <img src="assets/img/navbar-logo.png" alt="..." style="width:200px; height:auto;"/>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
             aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -74,7 +123,7 @@
       <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
         <li class="nav-item"><a class="nav-link" href="#areas">KULLANIM ALANLARI</a></li>
         <li class="nav-item"><a class="nav-link" href="#services">ÇÖZÜMLERİMİZ</a></li>
-        <li class="nav-item"><a class="nav-link" href="#devices">CİHAZLARIMIZ</a></li>
+        <li class="nav-item"><a class="nav-link" href="#products">ÜRÜNLERİMİZ</a></li>
         <li class="nav-item"><a class="nav-link" href="#about">HAKKIMIZDA</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">BİZE ULAŞIN</a></li>
       </ul>
@@ -93,7 +142,7 @@
 <section data-aos="fade-up" class="page-section bg-primary" id="areas">
   <div class="container">
     <div class="text-center mb-5">
-      <h2 class="section-heading text-uppercase">KULLANIM ALANLARI</h2>
+      <h2 class="section-heading text-uppercase text-light">KULLANIM ALANLARI</h2>
     </div>
     <div class="row text-center justify-content-around">
       <div class="col-md-2">
@@ -101,42 +150,38 @@
                     <i class="fas fa-circle fa-stack-2x text-light"></i>
                     <i class="fas fa-school fa-stack-1x"></i>
                 </span>
-        <h4 class="my-3">Okullar</h4>
+        <h4 class="my-3 text-light">Okullar</h4>
       </div>
       <div class="col-md-2">
                 <span class="fa-stack fa-4x">
                     <i class="fas fa-circle fa-stack-2x text-light"></i>
                     <i class="fas fa-hospital fa-stack-1x"></i>
                 </span>
-        <h4 class="my-3">Hastaneler</h4>
+        <h4 class="my-3 text-light">Hastaneler</h4>
       </div>
       <div class="col-md-2">
                 <span class="fa-stack fa-4x">
                     <i class="fas fa-circle fa-stack-2x text-light"></i>
                     <i class="fas fa-building fa-stack-1x"></i>
                 </span>
-        <h4 class="my-3">Kamu Binaları</h4>
+        <h4 class="my-3 text-light">Kamu Binaları</h4>
       </div>
       <div class="col-md-2">
                 <span class="fa-stack fa-4x">
                     <i class="fas fa-circle fa-stack-2x text-light"></i>
                     <i class="fas fa-industry fa-stack-1x"></i>
                 </span>
-        <h4 class="my-3">İş Hanları</h4>
+        <h4 class="my-3 text-light">İş Hanları</h4>
       </div>
       <div class="col-md-2">
                 <span class="fa-stack fa-4x">
                     <i class="fas fa-circle fa-stack-2x text-light"></i>
                     <i class="fas fa-house fa-stack-1x"></i>
                 </span>
-        <h4 class="my-3">Binalar</h4>
+        <h4 class="my-3 text-light">Binalar</h4>
       </div>
     </div>
   </div>
-</section>
-<!-- Görsel 1 -->
-<section data-aos="fade-up" class="full-width-section">
-  <img src="assets/img/about/image1.jpg" alt="Görsel 1">
 </section>
 <!-- Çözümlerimiz -->
 <section data-aos="fade-up" class="page-section" id="services">
@@ -148,122 +193,92 @@
     </div>
     <div class="row text-center">
       <div class="col-md-4">
-                <span class="fa-stack fa-4x">
-                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                    <i class="fas fa-heartbeat fa-stack-1x fa-inverse"></i>
-                </span>
-        <h4 class="my-3">Hayat Kurtarıcı Bilgiler</h4>
-        <p class="text-muted">Deprem anında anlık bilgi sağlayarak can kaybını en aza indiriyoruz.</p>
-      </div>
-      <div class="col-md-4">
-                <span class="fa-stack fa-4x">
-                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                    <i class="fas fa-clock fa-stack-1x fa-inverse"></i>
-                </span>
-        <h4 class="my-3">Hızlı Müdahale</h4>
-        <p class="text-muted">Acil durum ekiplerine hızlı ve doğru veri sağlayarak hayat kurtarıyoruz.</p>
-      </div>
-      <div class="col-md-4">
-                <span class="fa-stack fa-4x">
-                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                    <i class="fas fa-building fa-stack-1x fa-inverse"></i>
-                </span>
-        <h4 class="my-3">Bina Güvenliği</h4>
-        <p class="text-muted">Bina yıkılma riskini değerlendiriyor ve güvenli olmayan alanları tanımlıyoruz.</p>
-      </div>
-    </div>
-  </div>
-  <div class="container mt-4 d-flex justify-content-center">
-    <div class="accordion" id="accordionFaydalar" style="width: 100%;">
-      <div class="accordion-item" style="border: none">
-        <h2 class="accordion-header d-flex justify-content-center" id="headingOne">
-          <button class="btn btn-link text-primary custom-btn" type="button" data-bs-toggle="collapse" data-bs-target="#extraInfo" aria-expanded="false" aria-controls="extraInfo" id="toggleButton">
-            <span>Daha Fazla</span><br>
-            <i class="fas fa-chevron-down" id="arrowIcon"></i>
-          </button>
-        </h2>
-        <div class="collapse" id="extraInfo">
-          <div class="mt-4">
-            <ul style="list-style-type: disc; margin-left: 20px;">
-              <li>Çok Yönlü Kullanım: İşletmeler, tesisler ve şehirler için...</li>
-              <hr>
-              <li>Benzersizlik: BİS, Türkiye ve yurtdışında benzeri olmayan...</li>
-              <hr>
-              <li>Erken Uyarı ve Hızlı Tepki: BİS, deprem ve diğer doğal afetler için...</li>
-              <hr>
-              <li>Çok Yönlü Kullanım: İşletmeler, tesisler ve şehirler için uyarlanabilir olan BİS, çok geniş bir kullanım alanına sahiptir.</li>
-              <hr>
-              <li>Benzersizlik: BİS, Türkiye ve yurtdışında benzeri olmayan bir çözümdür, bu da projeyi daha değerli kılar.</li>
-              <hr>
-              <li>Erken Uyarı ve Hızlı Tepki: BİS, deprem ve diğer doğal afetler için erken uyarılar sunar, böylece insanların hızla güvenli bölgelere gitmelerine yardımcı olur.</li>
-              <hr>
-              <li>Saniyeler İçinde Veri: Anlık veri toplama ve analiz yeteneği, acil durum ekiplerine ve karar vericilere saniyeler içinde kritik bilgilere erişim sağlar.</li>
-              <hr>
-              <li>Kritik Altyapı Koruma: BİS, enerji tesisleri, hastaneler ve diğer kritik altyapıları korumak için özel önlemler sunar, böylece felaketlerde bu hizmetlerin sürdürülebilirliği sağlanır.</li>
-              <hr>
-              <li>Kamu Güvenliği İçin Vazgeçilmez: Şehir yönetimleri, afet yönetimi için BİS'ni kullanarak toplum güvenliğini artırır ve halkın güvenini kazanır.</li>
-              <hr>
-              <li>Uzaktan İzleme ve Kontrol: BİS, uzaktan izleme ve kontrol yetenekleri sunar, böylece afet bölgelerine fiziksel erişim sağlamadan önlemler alabilirsiniz.</li>
-              <hr>
-              <li>Hayat Kurtarma: [Ürün İsmi], doğal afetler sırasında hızlı ve kesin bilgi sağlayarak can kaybını minimumda tutmaya yardımcı olur. Enkaz altında kalan kişi sayısını tahmin eder ve acil yardım ekiplerine hızlı müdahale için gerekli verileri sunar.</li>
-              <hr>
-              <li>Veri Doğruluğu: Sisteminiz, anlık veri toplama ve analiz yetenekleriyle hızlı ve doğru bilgi sağlar. Bu, afet müdahalesinin daha iyi planlanmasını ve yönetilmesini sağlar.</li>
-              <hr>
-              <li>Altyapı Koruma: [Ürün İsmi], kritik altyapıyı koruma konusunda önemli bir rol oynar. Hastaneler, enerji tesisleri ve su kaynakları gibi önemli yapıları afetlere karşı güvende tutar.</li>
-              <hr>
-              <li>Hızlı Tepki: Sisteminiz, erken uyarılar ve hızlı tepki sağlayarak toplumun afetlere hazırlıklı olmasına yardımcı olur. Bu, hayat kurtarmada kritik bir faktördür.</li>
-              <hr>
-              <li>Bilinçli Toplum: BİS, toplumların afetlere karşı bilinçli ve hazırlıklı olmasını teşvik eder. Eğitim ve bilinçlendirme kampanyalarına destek sağlar.</li>
-              <hr>
-              <li>Çevre Dostu: Projenizin çevre dostu tasarımı, atık yönetimi ve sürdürülebilirlik uygulamaları ile doğal afetlerin çevresel etkilerini en aza indirir.</li>
-              <hr>
-              <li>Benzersiz Teknoloji: [Ürün İsmi], benzersiz özellikleri ve teknolojisi ile diğer benzer ürünlerden ayrılır ve yurt içi ve yurtdışında büyük bir rekabet avantajı sunar.</li>
-              <hr>
-              <li>Güvenlik ve Güven İnşası: BİS, insanların güvende olduklarını hissetmelerini teşvik eder. Bu, toplumlar arasında güven inşası ve dayanışmayı artırabilir.</li>
-              <hr>
-              <li>Ulaşılabilirlik ve Kullanım Kolaylığı: Ürününüzün kullanıcı dostu arayüzü, afet anında bile kullanıcıların verilere hızlı ve kolay erişim sağlamasını kolaylaştırır.</li>
-              <hr>
-              <li>Geleceğe Hazırlık: [Ürün İsmi], gelecekteki afetlere karşı hazırlık yapma fırsatı sunar. Veri toplama ve analizleri sayesinde gelecekteki afet risklerini daha iyi anlayabilir ve önleyici önlemler alabilirsiniz.</li>
-            </ul>
-          </div>
+        <!-- Daire şekli ve ikonu için kullanılan div -->
+        <div class="circle-icon">
+          <img src="assets/img/solutions/1.jpg" alt="Çözüm 1">
+          <i class="fas fa-heartbeat fa-inverse"></i>
         </div>
+        <h4 class="my-3">BİNA YIKILDI VERİSİ</h4>
+      </div>
+      <div class="col-md-4">
+        <!-- Daire şekli ve ikonu için kullanılan div -->
+        <div class="circle-icon">
+          <img src="assets/img/solutions/2.jpg" alt="Çözüm 2">
+          <i class="fas fa-clock fa-inverse"></i>
+        </div>
+        <h4 class="my-3">KİŞİ SAYMA</h4>
+      </div>
+      <div class="col-md-4">
+        <!-- Daire şekli ve ikonu için kullanılan div -->
+        <div class="circle-icon">
+          <img src="assets/img/solutions/3.jpg" alt="Çözüm 3">
+          <i class="fas fa-building fa-inverse"></i>
+        </div>
+        <h4 class="my-3">UYARI SİSTEMİ</h4>
       </div>
     </div>
   </div>
 </section>
 <!-- Ürünlerimiz -->
-<section data-aos="fade-up" class="page-section bg-secondary" id="products">
-  <div class="container text-light">
-    <div class="text-center">
-      <h2 class="section-heading text-uppercase mb-5">ÜRÜNLERİMİZ</h2>
-    </div>
-    <div id="productCarousel" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner" id="productCarouselInner">
-        <!-- Ürünler burada dinamik olarak eklenecek -->
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-  </div>
-</section>
-<!-- Cihazlarımız -->
-<section data-aos="fade-up" class="page-section bg-light" id="devices">
+<section id="products" class="banner">
   <div class="container">
-    <div class="text-center">
-      <h2 class="section-heading text-uppercase">CİHAZLARIMIZ</h2>
-      <h3 class="section-subheading text-muted">Cihazlar hakkında detaylı bilgiler.</h3>
-    </div>
-    <div class="row">
-      <!-- Buraya dinamik olarak portfolyo öğeleri eklenecek -->
+    <div class="banner-content">
+      <h1>Ürünümüz</h1>
+      <ul>
+        <li>LoRaWAN® & PoE Sürümleri</li>
+        <li>%98'e Varan Doğruluk</li>
+        <li>Disastech Panel'de Kullanıcı Dostu Yönetim</li>
+        <li>Gizlilik gerektiren senaryolar için ideal</li>
+        <li>Düşük güç tüketimi</li>
+        <li>Kolay ve kablosuz dağıtım</li>
+        <li>Uzun mesafeli iletim</li>
+        <li>Deprem algılama ve bina yıkıldı verisi</li>
+      </ul>
+      <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal">Daha Fazla</a>
     </div>
   </div>
 </section>
+<!-- Modal -->
+<div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="productModalLabel">Ürün Detayları</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="video-container">
+          <video width="100%" height="auto" controls>
+            <source src="assets/img/details/1.mp4" type="video/mp4">
+            Tarayıcınız video etiketini desteklemiyor.
+          </video>
+          <p>Bina yıkıldı verisi: Bir binanın deprem, yangın, patlama veya diğer olumsuz olaylar sonucunda tamamen veya kısmen yıkıldığını veya ciddi hasar gördüğünü belirlemek için kullanılan bir terim "bina yıkıldı" verisidir. Bu veri, acil durum yöneticileri, kurtarma ekipleri ve diğer ilgili taraflar için büyük önem taşır, çünkü etkilenen bölgedeki güvenlik ve kurtarma çalışmalarını yönlendirmelerine yardımcı olur. Bina yıkıldı verisi genellikle kamuya duyurulur ve insanların güvenli bir şekilde tahliye edilmelerini veya yardım almalarını sağlamak için güncel bilgilerin iletilmesine yardımcı olur. Bu tür veriler, afetler veya acil durumlar sırasında iletişim ve koordinasyonun kritik bir unsurunu oluşturur. Bina İhbar Sistemi, deprem anında oluşacak ivmeleri hesaplayarak ve deprem anındaki koşulları izleyerek, yerleştirildiği yapıların yıkılıp yıkılmadığını tespit edip bu bilgiyi bir kontrol panelinde paylaşır.</p>
+        </div>
+
+        <div class="video-container">
+          <video width="100%" height="auto" controls>
+            <source src="assets/img/details/3.mp4" type="video/mp4">
+            Tarayıcınız video etiketini desteklemiyor.
+          </video>
+          <p>Bina uyarı sistemi: Depremin yıkıcı etkileri başlamadan önce insanların hissetmediği ancak ürünümüz tarafından algılanabilen titreşimli ses dalgaları olan 'P' dalgalarını kullanarak, deprem başlamadan önce erken uyarı sağlayabilen bir alarm sistemi geliştirilmiştir. Bu ürün, Afet ve Acil Durum Yönetimi Başkanlığı (AFAD) deprem simülasyon merkezlerinde gerçekleştirilen deprem testleri ile doğrulanmış ve deprem anında meydana gelen tüm hareketleri inceleyerek 5 ve üzeri büyüklükteki depremlerde uyarı verme kapasitesine sahip şekilde tasarlanmıştır.</p>
+        </div>
+
+        <div class="image-container">
+          <img src="assets/img/details/2.jpg" alt="Ürün Resmi" width="100%">
+          <p>Kişi Sayısı Verisi: Sensörlerin doğruluğuyla, giriş ve çıkış akışlarını algılayarak gereksiz insan sayısını önlemek mümkündür. Bu sayede sadece binalara gerçekten giren insanları tespit edebilir ve dolaşan insanların gereksiz sayımlarını filtreleyebilirsiniz.</p>
+        </div>
+
+        <div class="image-container">
+          <img src="assets/img/details/4.jpg" alt="Ürün Resmi" width="100%">
+          <p>Uzaktan Yönetim: Kullanıcı dostu Disastech IoT Bulut yönetimi.</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- İnovasyon -->
 <section id="innovation" class="page-section">
   <div class="container">
@@ -271,50 +286,42 @@
       <h2 class="section-heading text-uppercase mb-5">İNOVASYON</h2>
     </div>
     <div class="row">
-      <!-- Görüntü İşleme Hizmeti -->
       <div class="col-md-6 col-lg-3 mb-4">
-        <div class="card">
-          <img src="assets/img/about/gorsel1.jpg" class="card-img-top" alt="Görüntü İşleme">
-          <div class="card-body">
+        <div class="card text-bg-dark">
+          <img src="assets/img/about/gorsel1.png" class="card-img" alt="Görüntü İşleme">
+          <div class="card-img-overlay">
             <h5 class="card-title">Görüntü İşleme</h5>
-            <p class="card-text">Görüntü işleme hizmetimizin açıklaması burada yer alabilir.</p>
-            <a href="#contact" class="btn btn-primary">Daha Fazla Bilgi</a>
+            <p class="card-text">Doğal afetlerle başa çıkmak için görüntü işleme teknolojileri kullanıyoruz.</p>
           </div>
         </div>
       </div>
 
-      <!-- Yapay Zeka Hizmeti -->
       <div class="col-md-6 col-lg-3 mb-4">
-        <div class="card">
-          <img src="assets/img/about/gorsel2.jpg" class="card-img-top" alt="Yapay Zeka">
-          <div class="card-body">
+        <div class="card text-bg-dark">
+          <img src="assets/img/about/gorsel2.png" class="card-img" alt="Yapay Zeka">
+          <div class="card-img-overlay">
             <h5 class="card-title">Yapay Zeka</h5>
-            <p class="card-text">Yapay zeka hizmetimizin açıklaması burada yer alabilir.</p>
-            <a href="#contact" class="btn btn-primary">Daha Fazla Bilgi</a>
+            <p class="card-text">Yapay zeka ile afet anında hızlı ve etkili müdahale sağlıyoruz.</p>
           </div>
         </div>
       </div>
 
-      <!-- LoRaWan Hizmeti -->
       <div class="col-md-6 col-lg-3 mb-4">
-        <div class="card">
-          <img src="assets/img/about/gorsel3.jpg" class="card-img-top" alt="LoRaWan">
-          <div class="card-body">
+        <div class="card text-bg-dark">
+          <img src="assets/img/about/gorsel3.png" class="card-img" alt="LoRaWan">
+          <div class="card-img-overlay">
             <h5 class="card-title">LoRaWan</h5>
-            <p class="card-text">LoRaWan hizmetimizin açıklaması burada yer alabilir.</p>
-            <a href="#contact" class="btn btn-primary">Daha Fazla Bilgi</a>
+            <p class="card-text">LoRaWan teknolojisi ile uzak alanlarda veri iletişimi kuruyoruz.</p>
           </div>
         </div>
       </div>
 
-      <!-- Kart Tasarımı Hizmeti -->
       <div class="col-md-6 col-lg-3 mb-4">
-        <div class="card">
-          <img src="assets/img/about/gorsel4.jpg" class="card-img-top" alt="Kart Tasarımı">
-          <div class="card-body">
+        <div class="card text-bg-dark">
+          <img src="assets/img/about/gorsel4.png" class="card-img" alt="Kart Tasarımı">
+          <div class="card-img-overlay">
             <h5 class="card-title">Kart Tasarımı</h5>
-            <p class="card-text">Kart tasarımı hizmetimizin açıklaması burada yer alabilir.</p>
-            <a href="#contact" class="btn btn-primary">Daha Fazla Bilgi</a>
+            <p class="card-text">Yüksek teknoloji kart tasarımları ile güvenliği artırıyoruz.</p>
           </div>
         </div>
       </div>
@@ -386,35 +393,42 @@
   <div class="container">
     <div class="text-center">
       <h2 class="section-heading text-uppercase">Bize Ulaşın</h2>
-      <h3 class="section-subheading text-white-50">Herhangi bir sorunuz veya öneriniz varsa, lütfen bizimle iletişime geçin.</h3>
+      <h3 class="section-subheading text-white-50">Herhangi bir sorunuz veya öneriniz varsa, lütfen bizimle iletişime
+        geçin.</h3>
     </div>
-    <form id="contactForm">
-      <div class="row align-items-stretch mb-5">
-        <div class="col-md-6">
+    <div class="row">
+      <div class="col-md-6">
+        <form id="contactForm">
           <div class="form-group">
-            <input class="form-control" id="name" type="text" placeholder="Adınız *" required />
+            <input class="form-control" id="name" type="text" placeholder="Adınız *" required/>
             <div class="invalid-feedback">Adınız gereklidir.</div>
           </div>
           <div class="form-group">
-            <input class="form-control" id="email" type="email" placeholder="E-posta Adresiniz *" required />
+            <input class="form-control" id="email" type="email" placeholder="E-posta Adresiniz *" required/>
             <div class="invalid-feedback">Geçerli bir e-posta adresi gereklidir.</div>
           </div>
-          <div class="form-group mb-md-0">
-            <input class="form-control" id="phone" type="tel" placeholder="Telefon Numaranız *" required />
+          <div class="form-group">
+            <input class="form-control" id="phone" type="tel" placeholder="Telefon Numaranız *" required/>
             <div class="invalid-feedback">Telefon numarası gereklidir.</div>
           </div>
-        </div>
-        <div class="col-md-6">
-          <div class="form-group form-group-textarea mb-md-0">
+          <div class="form-group form-group-textarea">
             <textarea class="form-control" id="message" placeholder="Mesajınız *" required></textarea>
             <div class="invalid-feedback">Mesajınız gereklidir.</div>
           </div>
-        </div>
+          <div class="text-center">
+            <button class="btn btn-primary btn-xl text-uppercase" id="submitButton" type="submit">Mesaj Gönder</button>
+          </div>
+        </form>
       </div>
-      <div class="text-center">
-        <button class="btn btn-primary btn-xl text-uppercase" id="submitButton" type="submit">Mesaj Gönder</button>
+      <div class="col-md-6 text-light">
+        <h3>İletişim Bilgileri</h3>
+        <p>Telefon: 123-456-7890</p>
+        <p>E-posta: info@ornek.com</p>
+        <p>AHMET YESEVİ MAH. KEREM SK.</p>
+        <p>NO: 9 /1 İÇ KAPI NO: 24</p>
+        <p>PENDİK/ İSTANBUL</p>
       </div>
-    </form>
+    </div>
   </div>
 </section>
 <!-- Footer-->
